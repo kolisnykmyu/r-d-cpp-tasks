@@ -2,5 +2,13 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "I love C++!\n";
+
+    std::cout << "\n";
+
+    std::cout << "*\n";
+    std::cout << "**\n";
+    std::cout << "***\n";
+    std::cout << "****\n";
+    std::cout << "*****\n";
 }
