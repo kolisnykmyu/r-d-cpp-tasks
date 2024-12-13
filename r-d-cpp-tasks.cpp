@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES
+
 #include <iostream>
 #include <iomanip>
 
@@ -79,4 +81,78 @@ int main()
     std::cin >> number;
     bool boolNumber = number;
     std::cout << "Bool number: " << std::boolalpha << boolNumber << std::endl;
+
+    // task 3-1.
+    const unsigned SecondsInMinute = 60;
+    const unsigned MinutesInHour = 60;
+    const unsigned SecondsInHour = SecondsInMinute * MinutesInHour;
+
+    std::cout << "Task 1: \n";
+    int seconds;
+
+    std::cout << "Enter seconds: ";
+    std::cin >> seconds;
+
+    std::cout << seconds / SecondsInHour << " hours, " << (seconds % SecondsInHour) / MinutesInHour << " minutes, " << (seconds % SecondsInHour) % SecondsInMinute << " seconds" << std::endl;
+
+
+    // task 3-2.
+    std::cout << "Task 2: \n";
+    int a, b, c;
+    std::cout << "Enter three numbers: \n";
+    std::cin >> a >> b >> c;
+
+    double sum = a + b + c;
+    double product = a * b * c;
+    double average = sum / 3;
+
+    std::cout << "Sum: " << sum << std::endl;
+    std::cout << "Product: " << product << std::endl;
+    std::cout << "Average: " << average << std::endl;
+
+
+    // task 3-3.
+    std::cout << "Task 3: \n";
+    int num1, num2;
+    bool lessThan, equal, moreThan, lessOrEqual;
+
+    std::cout << "Enter two numbers: \n";
+    std::cin >> num1 >> num2;
+
+    lessThan = num1 < num2;
+    equal = num1 == num2;
+    moreThan = num1 > num2;
+    lessOrEqual = num1 <= num2;
+
+    std::cout << "num1 less than num2: " << std::boolalpha << lessThan << std::endl;
+    std::cout << "num1 equal to num2: " << std::boolalpha << equal << std::endl;
+    std::cout << "num1 more than num2: " << std::boolalpha << moreThan << std::endl;
+    std::cout << "num1 less or equal to num2: " << std::boolalpha << lessOrEqual << std::endl;
+
+
+    // task 3-4.
+    std::cout << "Task 4: \n";
+    double width, height;
+
+    std::cout << "Enter width and height of rectangle: \n";
+    std::cin >> width >> height;
+
+    double rectangleArea = width * height;
+    double rectanglePerimetet = 2 * (width + height);
+
+    std::cout << "Area: " << rectangleArea << std::endl;
+    std::cout << "Perimeter: " << rectanglePerimetet << std::endl;
+
+    // task 3-5.
+    std::cout << "Task 5: \n";
+    double radius;
+
+    std::cout << "Enter radius of circle: \n";
+    std::cin >> radius;
+
+    double area = M_PI * pow(radius, 2);
+    double circuit = 2 * M_PI * radius;
+
+    std::cout << "Area: " << area << std::endl;
+    std::cout << "Circuit: " << circuit << std::endl;
 }
