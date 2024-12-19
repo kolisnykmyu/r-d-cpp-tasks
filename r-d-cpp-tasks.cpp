@@ -45,14 +45,19 @@ int main() {
 
     std::cout << "Enter 3 angles of a triangle: \n";
     std::cin >> angle1 >> angle2 >> angle3;
-
-    if (angle1 + angle2 + angle3 == 180) {
-        std::cout << "The angles form a triangle" << std::endl;
+    if (angle1 <= 0 || angle2 <= 0 || angle3 <= 0) {
+        std::cout << "The angles are not correct" << std::endl;
     }
     else {
+        if (angle1 + angle2 + angle3 == 180) {
+            std::cout << "The angles form a triangle" << std::endl;
+        }
+        else {
 
-        std::cout << "The angles do not form a triangle" << std::endl;
+            std::cout << "The angles do not form a triangle" << std::endl;
+        }
     }
+
 
     //4. 
 
